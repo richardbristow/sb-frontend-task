@@ -1,22 +1,22 @@
 import React from 'react'
 import Image from './children/image'
-import LikeButton from './children/like_button'
-import styles from './styles'
+import CommentList from './children/comment_list'
+import User from './children/user'
+import PostFooter from './children/post_footer'
+import { StyledMain } from './styles'
 
-const App = (props) => {
-  const { data } = props
-  return (
-    <main style={styles.main}>
-      <div style={styles.image}>
-        <Image data={data} />
-      </div>
-      <div style={styles.text}>
-        <p>User block</p>
-        <p>Comments block</p>
-        <LikeButton />
-      </div>
-    </main>
-  )
-}
+const App = ({ data }) => (
+  <StyledMain>
+    <div className='image'>
+      <Image data={data} />
+    </div>
+    <div className='text'>
+      <User data={data} />
+      <hr />
+      <CommentList data={data} />
+      <PostFooter data={data} />
+    </div>
+  </StyledMain>
+)
 
 export default App

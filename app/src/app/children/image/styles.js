@@ -1,4 +1,8 @@
-export default {
-  width: '100%',
-  display: 'block'
-}
+import styled from 'styled-components/macro'
+
+const StyledImage = styled.img`
+  max-height: inherit;
+  max-width: 100%;
+`
+
+export { StyledImage }
