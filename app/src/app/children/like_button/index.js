@@ -7,7 +7,7 @@ const LikeButton = ({ liked, size = 24 }) => {
   const [isLiked, setIsLiked] = useState(liked)
 
   return (
-    <StyledLikeButton onClick={() => setIsLiked(!isLiked)}>
+    <StyledLikeButton aria-label="like button" onClick={() => setIsLiked(!isLiked)}>
       {isLiked ? <LikedIcon size={size} /> : <UnlikedIcon size={size} />}
     </StyledLikeButton>
   )
